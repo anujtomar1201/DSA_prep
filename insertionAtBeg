@@ -1,0 +1,65 @@
+// maling the blue print for link list
+
+class Node {
+    constructor (new_data) {
+        this.data = new_data;
+        this.next = null;
+    }
+}
+
+// function for insetion at the front
+
+function insertAtFront (head,new_data){
+    
+    const newNode = new Node(new_data);
+    newNode.next = head;
+    
+    return newNode;
+}
+
+// function for traversing the array
+
+function traversing (head) {
+    
+    let curr = head;
+    let result = '';
+    
+    while (curr !== null){
+        result += "" + curr.data;
+        curr = curr.next;
+    }
+    console.log(result);
+}
+// manually creating linked list
+
+let head = new Node(2);
+head.next = new Node(3);
+head.next.next = new Node (4);
+head.next.next.next = new Node (5);
+
+// printing initial LL
+
+console.log ("Initially LL was : ");
+
+traversing(head);
+
+// making new node which is going to be added further 
+
+const data = 1;
+
+head = insertAtFront(head,  data);
+
+console.log("insertion at front" + "");
+traversing(after);
+
+
+
+
+
+
+
+
+
+
+
+
